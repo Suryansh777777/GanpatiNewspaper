@@ -1,0 +1,941 @@
+@font-face {
+  font-family: domain;
+  src: url(./domain.ttf);
+}
+@font-face {
+  font-family: lightt;
+  src: url(./Light.ttf);
+}
+@font-face {
+  font-family: canopeeli;
+  src: url(./canop2.ttf);
+}
+@font-face {
+  font-family: Devnagri;
+  src: url(./Devnew.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  border: 2px solid black;
+}
+span {
+  font-family: domain;
+}
+#main {
+  background-color: #222;
+  overflow-x: hidden;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#nav {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  height: 10vh;
+  width: 100%;
+  border-bottom: 1px solid #22222280;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  overflow: hidden;
+  display: sticky;
+}
+
+#nav img {
+  height: 140px;
+  width: 20%;
+  border: none;
+}
+#nav h5 {
+  font-size: 20px;
+  font-weight: 100;
+  width: 33%;
+}
+
+#nav i {
+  width: 33%;
+  text-align: right;
+  font-size: 25px;
+}
+#page1 {
+  height: 118vh;
+  width: 100vw;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #cabebe;
+
+}
+
+#elems {
+  height: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+}
+
+#elem1 {
+  width: 30%;
+  height: 100%;
+}
+#elem2 {
+  width: 30%;
+  height: 100%;
+  padding: 20px 60px;
+  text-align: center;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+#elem3 {
+  width: 30%;
+  height: 100%;
+}
+
+#image-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.6s;
+}
+
+#elem1 #image-div {
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+}
+#elem1 img {
+  object-fit: cover;
+  object-position: left 20%;
+}
+#elem3 #image-div {
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+}
+#elem3 img {
+  object-fit: cover;
+  object-position: left 90%;
+}
+#image-div:hover img {
+  scale: 1.1;
+}
+
+#elem1 h4 {
+  font-size: 34px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: canopee;
+  letter-spacing: 2px;
+}
+#elem1 p {
+  font-size: 23px;
+  font-family: domain;
+  font-weight: 100;
+  color: #282824;
+}
+
+#elem1 h4 span {
+  background-color: #b43b12;
+  color: white;
+  font-weight: 100;
+  font-size: 18px;
+  padding: 3px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#elem2 h2 {
+  font-family: canopee;
+  font-size: 78px;
+  font-weight: 100;
+}
+#elem2 h3 {
+  font-family: domain;
+  font-size: 50px;
+  font-weight: 100;
+  color: #282824;
+  margin: 20px 0;
+}
+
+#elem2 h6 {
+  font-family: domain;
+  font-size: 24px;
+  font-weight: 100;
+  color: #282824;
+}
+
+#page1 h1 {
+  font-size: 700px;
+  letter-spacing: -25px;
+  font-weight: 100;
+  background-color: #1c1c19;
+  color: #e2d4c0;
+  line-height: 600px;
+  font-family: canopee;
+  width: 96%;
+  padding-left: 25px;
+  margin-left: 2%;
+}
+
+#elem3 h4 {
+  font-size: 34px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: canopee;
+  letter-spacing: 1px;
+}
+#elem3 h4 span {
+  background-color: #b43b12;
+  color: white;
+  font-weight: 100;
+  font-size: 18px;
+  padding: 3px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+#elem3 p {
+  font-size: 23px;
+  font-family: domain;
+  font-weight: 100;
+  color: #282824;
+}
+#page2 {
+  height: 153vh;
+  width: 100%;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  /* background-color: #dcd5cd; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 40px;
+  border-bottom: 1px solid #cabebe;
+
+}
+#page2-left {
+  height: 136vh;
+
+  width: 35%;
+  padding-right: 60px;
+  border-right: 1px solid #4b4b4b;
+}
+#page2-left h2 {
+  font-size: 140px;
+  font-family: canopee;
+  /* text-align: center; */
+  line-height: 150px;
+  font-weight: 100;
+  text-align: center;
+}
+
+#page2-left > h3 {
+  font-size: 300px;
+  font-family: canopee;
+  /* text-align: center; */
+  line-height: 200px;
+  font-weight: 900;
+  padding-bottom: 30px;
+  text-align: center;
+}
+#page2-left > h4 {
+  font-size: 105px;
+  font-family: canopee;
+  /* text-align: center; */
+  line-height: 80px;
+  font-weight: 400;
+  padding-bottom: 30px;
+  text-align: center;
+}
+#page2-left img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 40% 10%;
+}
+#page2-left p {
+  font-size: 34px;
+  font-family: domain;
+  color: #1c1c19;
+  margin-top: 20px;
+}
+
+#page2-right {
+  height: 100%;
+  width: 70%;
+  padding: 0 60px;
+}
+#page2-right > img {
+  height: 53%;
+  width: 100%;
+  object-fit: cover;
+}
+#page2-right > h1 {
+  font-family: canopee;
+  font-size: 140px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+#page3 {
+  height: 57vh;
+  width: 100%;
+  padding: 40px 20px;
+  position: relative;
+  border-bottom: 1px solid #cabebe;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+}
+
+#page3 h1 {
+  width: fit-content;
+  font-weight: 100;
+  font-size: 550px;
+  letter-spacing: -10px;
+  font-family: canopee;
+  background-color: #1c1c19;
+  color: #e2d4c0;
+  padding: 0 20px;
+  line-height: 500px;
+  margin-left: 2%;
+}
+
+#page3 img {
+  height: 590px;
+  position: absolute;
+  top: 0;
+  right: 1%;
+  border: none;
+  padding: 40px 20px;
+
+}
+
+#page4 {
+  position: relative;
+  height: 150vh;
+  width: 100%;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #cabebe;
+  padding-top: 15px;
+
+}
+#page4-left {
+  position: relative;
+  height: 95%;
+  width: 65%;
+  border-right: 1px solid black;
+}
+
+#page4-left-top {
+  height: 27%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+#page4-left-top > #eleme1 {
+  width: 45%;
+  height: 100%;
+  border-right: 1px solid black;
+}
+#page4-left-top > #eleme1 > h2 {
+  font-family: canopee;
+  font-size: 77px;
+  font-weight: 600;
+}
+#page4-left-top > #eleme1 > h3 {
+  font-family: lightt;
+  font-size: 32px;
+  font-weight: 100;
+  padding-top: 10px;
+  padding-right: 35px;
+  text-align: justify;
+}
+#page4-left-top > #eleme2 {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 10px;
+}
+#elem2-image {
+  width: 100%;
+  height: 55%;
+  overflow: hidden;
+}
+#elem2-image > img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  transition: all ease 0.6s;
+}
+
+#elem2-image:hover > img {
+  scale: 1.1;
+}
+#page4 #elem3-image img {
+  position: absolute;
+  height: 65%;
+  top: 31%;
+  left: 4%;
+  width: 90%;
+  object-fit: cover;
+}
+
+#page4-left-top > #eleme2 > h3 {
+  font-family: canopee;
+  font-size: 35px;
+  font-weight: 900;
+  padding-top: 12px;
+}
+#page4-left-top > #eleme2 > h4 {
+  font-family: lightt;
+  font-size: 24px;
+  font-weight: 100;
+  padding-top: 15px;
+}
+#page4-right {
+  position: absolute;
+  right: 2px;
+  height: 95%;
+  width: 32%;
+  padding: 59px 27px 0px 0px;
+}
+
+#right-head > h2 {
+  font-family: canopee;
+  font-size: 170px;
+  font-weight: 600;
+  letter-spacing: -3px;
+  line-height: 50px;
+}
+
+#right-head > h1 {
+  font-family: canopee;
+  font-size: 220px;
+  font-weight: 600;
+  line-height: 300px;
+
+}
+
+#right-para > p:first-child {
+  padding-top: 40px;
+  font-size: 41px;
+  font-family: lightt;
+  font-weight: 100;
+  color: #282824;
+}
+#right-para > p:nth-child(2) {
+  padding: 40px 0;
+  font-size: 40px;
+  font-family: lightt;
+  font-weight: 100;
+  color: #282824;
+}
+
+#page4 #workbtn {
+  margin-top: 40px ;
+  height: 250px;
+  width: 100%;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  border: 1px solid #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+#workbtn h1 {
+  font-size: 100px;
+  font-family: canopee;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-18%);
+  transition: all ease 0.7s;
+}
+#workbtn img {
+  border-style: none;
+  height: 220px;
+  transform: translateX(-120%);
+  transition: all ease 0.7s;
+}
+#workbtn:hover img {
+  height: 220px;
+  transform: translateX(120%);
+}
+#workbtn:hover h1 {
+  transform: translateX(140%);
+}
+
+#page5 {
+  overflow-x: hidden;
+  height: 112vh;
+  width: 100vw;
+  position: relative;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  justify-content: space-around;
+  margin-bottom: -100px;
+}
+
+#left-page5 {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  padding: 0px 20px;
+}
+
+#left-page5 > #heads > h1 {
+  position: absolute;
+  top: 1%;
+  left: 32%;
+  line-height: 23vw;
+  font-family: canopee;
+  font-size: 32vw;
+  font-weight: 400;
+  letter-spacing: -20px;
+}
+
+#left-page5 > h2 {
+  position: absolute;
+  top: 41%;
+  left: 10%;
+  line-height: 29vw;
+  font-family: canopee;
+  font-size: 31vw;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+
+#left-page5 img {
+  position: absolute;
+  top: 1%;
+  height: 44vh;
+  width: 14vw;
+  object-fit: cover;
+  border: 2px solid black;
+}
+
+#right-page5 {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+#right-page5 img {
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  height: 94vh;
+  width: 45vw;
+  border: 2px solid black;
+  object-fit: cover;
+}
+
+#page6 {
+  margin:-120px 0;
+  overflow-x: hidden;
+  height: 68vh;
+  width: 100vw;
+  position: relative;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#left-page6 {
+  position: relative;
+  width: 26.5%;
+  height: 90%;
+}
+
+#right-page6 {
+  position: relative;
+  width: 90%;
+  height: 90%;
+}
+
+#right-page6 h1 {
+  position: absolute;
+  top: 9%;
+  left: 0%;
+  line-height: 20vw;
+  font-family: canopee;
+  font-size: 29vw;
+  font-weight: 400;
+  letter-spacing: -40px;
+}
+
+#left-page6 img {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  height: 43vh;
+  width: 22vw;
+  border: 2px solid black;
+  object-fit: cover;
+  object-position: 25%;
+}
+#page7 {
+  overflow-x: hidden;
+  height: 55vh;
+  width: 100vw;
+  position: relative;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#left-page7 {
+  margin-top: 2vw;
+  position: relative;
+  width: 60%;
+  height: 90%;
+}
+
+#right-page7 {
+  position: relative;
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding-right: 10px;
+  padding: 0 18px;
+}
+#right-page7 h4 {
+  font-family: lightt;
+  font-size: 1.8vw;
+  font-weight: 300;
+}
+#right-page7 h2 {
+  font-family: canopee;
+  font-size: 6vw;
+  font-weight: 600;
+}
+
+#left-page7 h1 {
+  font-size: 25.4vw;
+  letter-spacing: -0.045em;
+  line-height: 44vh;
+  font-weight: 100;
+  background-color: #1c1c19;
+  text-align: center;
+  color: #e2d4c0;
+  font-family: canopee;
+  width: 100%;
+  padding: 0 20px;
+}
+
+#page8 {
+  overflow-x: hidden;
+  height: 60vh;
+  width: 100vw;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  position: relative;
+  border-bottom: 1px solid #cabebe;
+}
+
+.container {
+  padding: 0px 30px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 19.5vw);
+  align-items: center;
+  justify-content: center;
+}
+.cards {
+  position: relative;
+  border-radius: 17px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  height: 48vh;
+  width: 38vw;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  transition: transform ease 0.5s;
+}
+#card1:hover ~ #card2 {
+  transform: translateX(16vw);
+}
+#card1:hover ~ #card3 {
+  transform: translateX(16vw);
+}
+#card2:hover ~ #card3 {
+  transform: translateX(16vw);
+}
+#card2:hover ~ #card4 {
+  transform: translateX(16vw);
+}
+#card3:hover ~ #card4 {
+  transform: translateX(16vw);
+}
+
+.cards::before {
+  content: "";
+  border-radius: 17px;
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='13' ry='13' stroke='%23333' stroke-width='5' stroke-dasharray='10%2c 15' stroke-dashoffset='13' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 13px;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+}
+.cards::after {
+  border-radius: 17px;
+  content: "";
+  position: absolute;
+  border: 4px solid black;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.cards h4 {
+  padding: 0px 50px;
+  font-family: lightt;
+  font-weight: 100;
+  line-height: 3vw;
+  font-size: 2.2vw;
+  text-align: start;
+  letter-spacing: -0.03em;
+  text-decoration: underline;
+  text-underline-offset: 0.3vw;
+  text-decoration-thickness: 0.5px;
+  text-decoration-color: #0000007a;
+}
+
+#page9 {
+  overflow-x: hidden;
+  height: 45vh;
+  width: 101vw;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  position: relative;
+  
+}
+#elements {
+  height: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+}
+
+#element1 {
+  width: 30%;
+  height: 100%;
+}
+#element2 {
+  width: 30%;
+  height: 100%;
+  padding: 20px 60px;
+  text-align: center;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+#element3 {
+  width: 30%;
+  height: 100%;
+}
+
+#video-div video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.6s;
+}
+
+#element1 #video-div {
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid black;
+  border-radius:8px;
+}
+#element1 video {
+  object-fit: cover;
+  object-position: center 30%;
+}
+#element3 #video-div {
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid black;
+  border-radius:8px;
+}
+#element3 video {
+  object-fit: cover;
+  object-position: center 30%;
+}
+#element1 h4 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: domain;
+}
+#element1 p {
+  font-size: 23px;
+  font-family: domain;
+  font-weight: 100;
+  color: #282824;
+}
+
+#element1 h4 span {
+  background-color: #b43b12;
+  color: white;
+  font-weight: 100;
+  font-size: 18px;
+  padding: 3px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+#element2 h2 {
+  font-family: canopee;
+  font-size: 75px;
+  font-weight: 100;
+}
+#element2 h3 {
+  font-family: domain;
+  font-size: 50px;
+  font-weight: 100;
+  color: #282824;
+  margin: 20px 0;
+}
+
+#element2 h6 {
+  font-family: domain;
+  font-size: 24px;
+  font-weight: 100;
+  color: #282824;
+}
+
+#element3 h4 {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: domain;
+
+}
+#element3 h4 span {
+  background-color: #b43b12;
+  color: white;
+  font-weight: 100;
+  font-size: 18px;
+  padding: 3px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+#element3 p {
+  font-size: 23px;
+  font-family: domain;
+  font-weight: 100;
+  color: #282824;
+}
+
+#page10 {
+  height: 18vh;
+  width: 100%;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-top: 2px solid rgb(153, 153, 153);
+  border-bottom: 2px solid rgb(153, 153, 153);
+  padding: 30px;
+}
+#page10::-webkit-scrollbar {
+  display: none;
+}
+
+#page10 h1 {
+  font-size: 100px;
+  font-family: lightt;
+  font-weight: 100;
+  display: inline-block;
+  margin-right: 30px;
+  animation: scroll;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+#page10 h1 span {
+  font-family: canopee;
+  font-weight: 100;
+  background-color: rgba(0, 0, 0, 0.809);
+  color: #c4bcb3;
+  padding: 5px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 34px));
+  }
+}
+
+#page10:hover h1 {
+  animation-play-state: paused;
+}
+
+#page11 {
+  height: 14vh;
+  width: 100vw;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="1" specularConstant="1" specularExponent="20" lighting-color="%23d0d0d0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="50"></feDistantLight></feSpecularLighting><feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix"></feColorMatrix></filter></defs><rect width="700" height="700" fill="%23deceb8ff"></rect><rect width="700" height="700" fill="%23d0d0d0" filter="url(%23nnnoise-filter)"></rect></svg>');
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+#page11-left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2vw;
+}
+
+#page11-left img {
+  object-fit: cover;
+  height: 50px;
+}
+#page11-right {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2vw;
+}
+#page11 h4 {
+  font-size: 1.5vw;
+  font-family: canopee;
+  font-weight: 400;
+  line-height: 1.5vw;
+}
